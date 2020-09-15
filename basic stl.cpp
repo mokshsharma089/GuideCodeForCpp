@@ -75,7 +75,7 @@ int main(){
   //1.
   //int in maps or unordered_map is always initiated with 0
   map<char,int> map;
-  string s="moksh sharma will be selected for nagarro and will have a great career";
+  string s="are bhai kya code ahi yeh to mast ekdum mast ekdum";
   for(auto a:s){
     map[a]++;
   }
