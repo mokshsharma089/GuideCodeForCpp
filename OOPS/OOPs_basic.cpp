@@ -21,15 +21,15 @@ class GrandParent{
     }
     //while runing code comment out at least one copy constructor
     // Shallow Copy Constructor
-    // GrandParent(const GrandParent& temp){
-    //   //shallow copy constructor is called
-    //   cout<<endl<<"Shallow Copy function called"<<endl;
-    //   this->a=temp.a;
-    //   this->b=temp.b;
-    //   this->c=temp.c;
-    //   this->s=temp.s;
-    //   //points to the same variable s of temp eventhough it is dynamic variable
-    // }
+    GrandParent(const GrandParent& temp){
+      //shallow copy constructor is called
+      cout<<endl<<"Shallow Copy function called"<<endl;
+      this->a=temp.a;
+      this->b=temp.b;
+      this->c=temp.c;
+      this->s=temp.s;
+      //points to the same variable s of temp eventhough it is dynamic variable
+    }
 
     //Deep Copy Constructor
     GrandParent(const GrandParent& temp){
@@ -92,18 +92,18 @@ class GrandParent{
 };
 int main(){
   GrandParent gprt1;
-  // GrandParent gprt2(1,8,64);
-  // string a;
+  GrandParent gprt2(1,8,64);
+  string a;
   gprt1.show();
-  // gprt2.show();
-  // cout<<"Enter New String For GPR1 : ";
-  // getline(cin,a);
-  // gprt1.setString(a);
-  // GrandParent gprt3=gprt1+gprt2;
-  // gprt3.show();
-  // GrandParent gprt4=gprt1+gprt3;
-  // gprt4.show();
-  // ++gprt4;//capitalises using "int toupper(int ch)" the string
+  gprt2.show();
+  cout<<"Enter New String For GPR1 : ";
+  getline(cin,a);
+  gprt1.setString(a);
+  GrandParent gprt3=gprt1+gprt2;
+  gprt3.show();
+  GrandParent gprt4=gprt1+gprt3;
+  gprt4.show();
+  ++gprt4;//capitalises using "int toupper(int ch)" the string
   GrandParent gprt5(gprt1);
   gprt5.show();
   return 1;
